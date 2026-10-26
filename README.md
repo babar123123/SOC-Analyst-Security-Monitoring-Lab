@@ -45,3 +45,34 @@ This project was created for educational and defensive security monitoring purpo
 ### Kibana SOC Security Monitoring Dashboard
 
 ![SOC Security Monitoring Dashboard](screenshots/dashboard.png)
+
+
+## Repository Structure
+
+```text
+SOC-Analyst-Security-Monitoring-Lab/
+├── README.md
+├── screenshots/
+│   └── soc-dashboard.png
+├── detection-rules/
+│   └── detection-rules.md
+└── documentation/
+    └── lab-setup.md
+```
+
+## Skills Demonstrated
+
+- SIEM monitoring with Elastic Security
+- KQL detection queries
+- Windows event log analysis
+- Sysmon telemetry investigation
+- Threshold-based alerting
+- Kibana dashboard development
+- Security alert validation and documentation
+
+## Project Status
+
+**Completed lab activities:** File creation monitoring, threshold-based detection, process execution monitoring, network connection monitoring, and Windows Defender configuration change monitoring.
+
+*This project is a lab demonstration, not a production security deployment.*
+
