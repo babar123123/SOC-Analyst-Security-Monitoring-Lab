@@ -31,3 +31,40 @@ Rules were tested in a controlled lab using safe test activity. Detection result
 
 ## Disclaimer
 For educational and defensive security monitoring purposes only.
+
+## Detection Queries (KQL)
+
+### 1. Sysmon File Creation Monitoring
+
+```kql
+data_stream.dataset : "windows.sysmon_operational"
+and event.code : "11"
+and file.directory : "C:\\RansomwareLab"
+```
+
+### 2. Suspicious Process Execution
+
+```kql
+data_stream.dataset : "windows.sysmon_operational"
+and event.code : "1"
+and process.name : ("powershell.exe" or "cmd.exe" or "wscript.exe" or "cscript.exe" or "mshta.exe")
+```
+
+### 3. Suspicious Process Network Connections
+
+```kql
+data_stream.dataset : "windows.sysmon_operational"
+and event.code : "3"
+and process.name : ("powershell.exe" or "cmd.exe" or "wscript.exe" or "cscript.exe" or "mshta.exe")
+```
+
+### 4. Windows Defender Configuration Changes
+
+```kql
+data_stream.dataset : "winlog.winlog"
+and winlog.channel : "Microsoft-Windows-Windows Defender/Operational"
+and event.code : "5007"
+```
+
+**Note:** KQL field availability depends on the ingested event fields and data view. Validate each query in Kibana before using it in production.
+
