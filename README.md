@@ -41,3 +41,7 @@ Screenshots of the dashboard, detection rules, and generated alerts will be adde
 
 ## Disclaimer
 This project was created for educational and defensive security monitoring purposes in a controlled lab environment.
+
+### Kibana SOC Security Monitoring Dashboard
+
+![SOC Security Monitoring Dashboard](screenshots/dashboard.png)
